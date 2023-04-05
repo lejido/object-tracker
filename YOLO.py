@@ -12,7 +12,7 @@ class YOLONode(Node):
 
   def __init__(self):
     super().__init__('yolo_node')
-    self.publisher_ = self.create_publisher(String, 'CoordsTopic', 1) 
+    self.publisher_ = self.create_publisher(String, 'coordinates', 1) 
     timer_period = 0.5 
     self.timer = self.create_timer(timer_period, self.timer_callback) 
     self.i = 0 
